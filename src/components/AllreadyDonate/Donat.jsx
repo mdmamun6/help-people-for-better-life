@@ -72,9 +72,13 @@ export default function () {
                 }
             </ul>
             <div className="text-center">
-              <div className={dataLength === donate.length && 'hidden'}>
-                <button onClick={() => setDataLength(donate.length)} className='btn mt-10 text-center  bg-indigo-800 hover:bg-indigo-600 text-white'>Show More</button>
-              </div>
+              {donate.length > 0 && dataLength !== donate.length && (
+                <div>
+                  <button onClick={() => setDataLength(donate.length)} className='btn mt-10 text-center bg-indigo-800 hover:bg-indigo-600 text-white'>
+                    Show More
+                  </button>
+                </div>
+              )}
             </div>
         </div>
     </div>

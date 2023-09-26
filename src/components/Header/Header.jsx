@@ -9,12 +9,12 @@ export default function Header() {
     return location.pathname === routePath;
   };
 
-  const activeClass = 'text-red-500'; 
+  const activeClass = 'text-red-500 underline'; 
   const inactiveClass = 'text-gray-600'; 
 
   return (
     <div>
-      <div className="navbar	 flex justify-between mx-auto py-6 w-[90%] md:w-[80%] bg-base-100">
+      <div className="navbar	 flex justify-between mx-auto py-6 w-[90%] md:w-[80%] bg-white">
         <div className="">
           <a href='/' className="text-left w-32	md:w-48 text-xl"><img src="../img/Group 39461.png" alt="" /></a>
         </div>

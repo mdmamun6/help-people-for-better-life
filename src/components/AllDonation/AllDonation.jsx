@@ -10,17 +10,17 @@ export default function AllDonation({ categoryFilter }) {
       .then((data) => setDonations(data));
   }, []);
 
-  // Filter donations based on categoryFilter
   const filteredDonations = donations.filter(
     (donation) =>
       donation.category.toLowerCase().includes(categoryFilter.toLowerCase())
   );
 
-  const gridColumns = categoryFilter ? 'grid-cols-3' : 'grid-cols-4';
+  const gridColumns = categoryFilter ? 'lg:grid-cols-3' : 'lg:grid-cols-4';
+  const mobileGridColumns = 'md:grid-cols-1'; 
 
   return (
     <div>
-      <div className={`mx-auto w-[90%] py-20 md:w-[80%] grid ${gridColumns} gap-6`}>
+      <div className={`mx-auto w-[90%] md:py-20 py-6 md:w-[80%] grid ${gridColumns} ${mobileGridColumns} gap-6`}>
         {categoryFilter
           ? filteredDonations.map((donation) => (
               <Donation key={donation.id} donation={donation} />

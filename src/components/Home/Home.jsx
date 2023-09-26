@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="">
       <div
-        className="hero h-[650px]"
+        className="hero h-[400px] md:h-[650px]"
         style={{
           backgroundImage: 'url(http://diejohnsons.samcoderswebsolutions.com/wp-content/uploads/2023/09/Rectangle-4281.png)',
         }}
@@ -28,7 +28,7 @@ export default function Home() {
                 <input
                   type="text"
                   placeholder="Search here…"
-                  className="input text-gray-800 bg-white w-96 focus:outline-none input-bordered"
+                  className="input text-gray-800 bg-white md:w-96 focus:outline-none input-bordered"
                   value={categoryFilter}
                   onChange={(e) => setCategoryFilter(e.target.value)}
                 />

@@ -52,19 +52,19 @@ export default function () {
   return (
     <div>
         <div className='mx-auto md:py-20 py-6 w-[90%] md:w-[80%]'>
-            <ul className='grid grid-cols-2 gap-6'>
+            <ul className='grid md:grid-cols-2 gap-6'>
                 {
                   donate.slice(0,dataLength).map(donation => <li  key={donation.id}>
                     <span>
-                    <div className={`grid grid-cols-3 mb-6 gap-6 rounded-md ${categoriesBgColor[donation.category]}`}>
-                        <div className="col-span-1">
+                    <div className={`grid md:grid-cols-3 mb-6 gap-6 rounded-md ${categoriesBgColor[donation.category]}`}>
+                        <div className="md:col-span-1">
                           <img src={donation.img} alt="" className="md:h-[212px] h-auto w-full rounded-md" />
                         </div>
-                        <div className="col-span-2 space-y-2 py-6">
+                        <div className="md:col-span-2 space-y-2 md:py-6 p-6">
                           <button className={`text-sm p-2  px-3 rounded font-semibold ${titleClasses[donation.category]} ${categoriesTextBgColor[donation.category]} bg-opacity-40`}>{donation.category}</button>
-                          <h3 className={`text-2xl font-semibold text-gray-800`}>{donation.title}</h3>
+                          <h3 className={`md:text-2xl text-xl font-semibold text-gray-800`}>{donation.title}</h3>
                           <p className={`font-medium ${titleClasses[donation.category]}`}>${donation.price}</p>    
-                          <button className={` text-sm p-2 btn px-3 rounded font-semibold ${categoriesBtnBgColor[donation.category]}   text-white `}>Show Details</button>                       
+                          <button className={` text-sm p-2 btn px-3 rounded md:font-semibold ${categoriesBtnBgColor[donation.category]}   text-white `}>Show Details</button>                       
                         </div>
                       </div>
                     </span>
